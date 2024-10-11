@@ -1,5 +1,5 @@
 import streamlit as st
-import mysql.connector
+#import mysql.connector
 import openpyxl 
 
 # conexao = mysql.connector.connect(
