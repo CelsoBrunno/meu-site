@@ -52,31 +52,31 @@ def main():
        if nome and email and sexo and data_nascimento and telefone !='':
             
             comando = f'INSERT INTO cadastro (nome, telefone, email, sexo, data_nascimento, auto_exame, nota, avaliacao) VALUES ("{nome}", "{telefone}", "{email}", "{sexo}", "{data_nascimento}", "{exame}", "{nota}", "{avaliacao}")'
-            cursor.execute(comando)
-            conexao.commit()
+           # cursor.execute(comando)
+           # conexao.commit()
             st.success('Obrigado pela Presença! Ame-se Realize o Auto Exame')
        else:
             st.error("Por favor, insira dados válidos")
 
     if nome == 'Final':
         comando2 = f'Select * from cadastro'
-        cursor.execute(comando2)
-        resultado = cursor.fetchall()
+        # cursor.execute(comando2)
+        # resultado = cursor.fetchall()
         
-        workbook = openpyxl.Workbook()
-        sheet = workbook.active
+      #  workbook = openpyxl.Workbook()
+      #  sheet = workbook.active
 
 
-        for col_num, column_name in enumerate(cursor.column_names, start=1):
-            sheet.cell(row=1, column= col_num, value= column_name)
+        #for col_num, column_name in enumerate(cursor.column_names, start=1):
+           # sheet.cell(row=1, column= col_num, value= column_name)
 
-        row_num = 2
-        for registro in resultado:
-            for col_num, cell_value in enumerate(registro, start=1):
-                sheet.cell(row= row_num, column= col_num, value= cell_value)
-            row_num +=1
+       # row_num = 2
+        # for registro in resultado:
+        #     for col_num, cell_value in enumerate(registro, start=1):
+        #         sheet.cell(row= row_num, column= col_num, value= cell_value)
+        #     row_num +=1
 
-        workbook.save('dados.xlsx')
+        # workbook.save('dados.xlsx')
          
 if __name__ == '__main__':
     main()
