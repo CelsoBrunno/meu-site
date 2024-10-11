@@ -2,14 +2,14 @@ import streamlit as st
 import mysql.connector
 import openpyxl 
 
-conexao = mysql.connector.connect(
-    host='127.0.0.1',
-    user='root',
-    password='',
-    database='evento'
-)
+# conexao = mysql.connector.connect(
+#     host='127.0.0.1',
+#     user='root',
+#     password='',
+#    database='evento'
+#)
 
-cursor = conexao.cursor()
+#cursor = conexao.cursor()
 
 def main():
     st.set_page_config(page_title='Outubro Rosa', page_icon='icone.jpg')
